@@ -1,4 +1,8 @@
 import Router from './Routes/Router';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faArrowLeft, faArrowRight, faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+library.add( faCheckSquare, faCoffee, faArrowRight, faArrowLeft)
 
 function App() {
   return (

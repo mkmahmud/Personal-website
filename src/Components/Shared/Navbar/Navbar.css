@@ -1,0 +1,32 @@
+
+.navanimation{
+    animation: navanimation 2s infinite ;
+    transition: 0.4s ease-in-out;
+}
+
+.navanimation-right{
+    animation: navanimationRight 2s infinite ;
+    transition: 0.4s ease-in-out;
+}
+
+@keyframes navanimation {
+    0%{
+        transform: translateX(-20px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(10px);
+        opacity: 0;
+    }
+}
+
+@keyframes navanimationRight {
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+}
