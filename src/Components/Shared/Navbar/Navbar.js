@@ -23,7 +23,7 @@ const Navbar = () => {
             </div>
             {
                 navbarStatus ?
-                    <div className='md:hidden  h-screen w-full  top-0 left-0 flex justify-between items-center absolute bg-sec-bg p-5 -ml-[00%]'>
+                    <div className='md:hidden  z-20  h-screen w-full  top-0 left-0 flex justify-between items-center absolute bg-sec-bg p-5 -ml-[00%]'>
                         <div>
                             <ul>
                                 {
@@ -37,9 +37,9 @@ const Navbar = () => {
             }
             {
                 navbarStatus
-                    ? <FontAwesomeIcon onClick={() => { setnavbarStatus(!navbarStatus) }} className='navanimation-right md:hidden  fixed text-red-400 top-[48vh] text-3xl right-0' icon="fa-arrow-left" />
+                    ? <FontAwesomeIcon onClick={() => { setnavbarStatus(!navbarStatus) }} className='navanimation-right z-20 md:hidden  fixed text-red-400 top-[48vh] text-3xl right-0' icon="fa-arrow-left" />
                     :
-                    <FontAwesomeIcon onClick={() => { setnavbarStatus(!navbarStatus) }} className='navanimation fixed md:hidden  text-red-400 top-[48vh] text-3xl left-0' icon="fa-arrow-right" />
+                    <FontAwesomeIcon onClick={() => { setnavbarStatus(!navbarStatus) }} className='navanimation z-20 fixed md:hidden  text-red-400 top-[48vh] text-3xl left-0' icon="fa-arrow-right" />
             }
 
 
