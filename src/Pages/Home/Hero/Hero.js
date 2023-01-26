@@ -1,8 +1,9 @@
 import React from 'react';
-import user from '../../../Assets/Group 32.png';
+// import user from '../../../Assets/Group 32.png';
 import { FaArrowRight, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Hero.css';
+import user from '../../../Assets/user1.png';
 
 const Hero = () => {
     return (

@@ -23,7 +23,7 @@ const Navbar = () => {
             </div>
             {
                 navbarStatus ?
-                    <div className='md:hidden  z-20  h-screen w-full  top-0 left-0 flex justify-between items-center absolute bg-sec-bg p-5 -ml-[00%]'>
+                    <div className='md:hidden  z-20  h-screen w-full  top-0 left-0 flex justify-between items-center fixed bg-sec-bg p-5 -ml-[00%]'>
                         <div>
                             <ul>
                                 {
