@@ -6,7 +6,7 @@ import {
 import Main from '../Layouts/Main/Main';
 import Home from '../Pages/Home/Home';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter([ 
     {
         path:'/',
         element:<Main></Main>,
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element: <Home></Home>
-            }
+            } 
         ]
     }
 ])
