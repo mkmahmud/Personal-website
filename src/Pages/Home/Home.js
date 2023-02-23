@@ -1,4 +1,5 @@
 import React from 'react';
+import Experience from './Experience/Experience';
 import Expertise from './Expertise/Expertise';
 import Hero from './Hero/Hero';
 import Portfolio from './Portfolio/Portfolio';
@@ -11,8 +12,9 @@ const Home = () => {
           <Expertise></Expertise>
           <Portfolio></Portfolio>
           <Skills></Skills>
+          <Experience></Experience>
         </div>
     );
 };
 
-export default Home; 
+export default Home;  

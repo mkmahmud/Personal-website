@@ -12,7 +12,8 @@ module.exports = {
         'main-bg': '#090E16',
         'sec-bg': '#0f1120',
         'second':'#7B4AE2',
-        'sec-text': '#87888f'
+        'sec-text': '#87888f',
+        'card-background': '#14142'
       },
       animation: {
         navanimation: 'navIcon 1s infinite'

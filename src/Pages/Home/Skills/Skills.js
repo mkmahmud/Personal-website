@@ -12,9 +12,9 @@ import skillsIcon from '../../../Assets/icons/skills.png'
 const Skills = () => {
     return (
         <div className='my-24'>
-            <div className='md:flex justify-between items-center'>
+            <div className='md:flex justify-center items-center'>
                 <div >
-                    <div className='flex items-center text-xl w-[150px] rounded p-2 font-bold text-second bg-sec-bg'>
+                    <div className='flex mx-auto  items-center text-xl w-[150px] rounded p-2 font-bold text-second bg-sec-bg'>
                         <FaLaptop></FaLaptop>
                         <h2 className='px-2 '> Skills</h2>
                     </div>
@@ -50,7 +50,7 @@ const Skills = () => {
                 </div>
                 <div className='my-16 mx-auto text-center'>
 
-                    <h2 className='text-sec-text my-2'>Main Expertise</h2>
+                    <h2 className='text-sec-text my-2'>Proficient Expertise</h2>
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
                         spaceBetween={10}
