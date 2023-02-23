@@ -4,6 +4,7 @@ import Expertise from './Expertise/Expertise';
 import Hero from './Hero/Hero';
 import Portfolio from './Portfolio/Portfolio';
 import Skills from './Skills/Skills';
+import Testimonial from './Testimonial/Testimonial';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
           <Portfolio></Portfolio>
           <Skills></Skills>
           <Experience></Experience>
+          <Testimonial></Testimonial>
         </div>
     );
 };
