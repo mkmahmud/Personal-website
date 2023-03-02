@@ -1,33 +1,47 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../Assets/logo.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import logo from '../../../Assets/TFlogo.png';
 import './Navbar.css'
+import { MyContext } from '../../../Context/NavContext';
+
+
 
 const Navbar = () => {
 
     // Mobile Navbar Status
-    const [navbarStatus, setnavbarStatus] = useState(false)
+    const {data, setData} = useContext(MyContext);
 
-    const menus = [{id:1, name:'Home'}, {id:2, name:'About'},{id:3, name:'Blog'},{id:4, name:'Skills'}, {id:5, name:'Contact'}]
+    const handleClickScroll = (path) => {
+        const element = document.getElementById(path);
+        if (element) {
+            // 👇 Will scroll smoothly to the top of the next section
+            element.scrollIntoView({ behavior: 'smooth' });
+            setData(!data)
+        }
+    };
+
+    
+
+
+    const menus = [{ id: 1, name: 'Home' }, { id: 2, name: 'About' }, { id: 3, name: 'Projects' }, { id: 4, name: 'Skills' }, { id: 6, name: 'Experience' }, { id: 5, name: 'Contact' }]
 
     return (
         <div className=''>
-            <div className='hidden md:block bg-sec-bg rounded-lg my-4 md:flex justify-between items-center '>
-                <Link to='/'>  <img src={logo} className='px-4 py-2 ' alt="" /></Link>
+            <div className='hidden md:block bg-sec-bg rounded-lg my-4 md:flex justify-between items-center md:z-50 md:fixed -top-2 left-0 right-0 w-full'>
+                <Link to='/'>  <img src={logo} className='px-4 py-2 h-[70px] w-[93px]' alt="" /></Link>
                 <ul className='md:flex '>
                     {
-                        menus.map(menu => <li key={menu.id} className='mx-4 text-sec-text'><Link to={`/${menu.name}`}>{menu.name}</Link></li>)
+                        menus.map(menu => <li onClick={() => handleClickScroll(menu.name)} key={menu.id} className='mx-4 text-sec-text'><Link to={`/#${menu.name}`}>{menu.name}</Link></li>)
                     }
                 </ul>
             </div>
             {
-                navbarStatus ?
+                data ?
                     <div className='md:hidden  z-20  h-screen w-full  top-0 left-0 flex justify-between items-center fixed bg-sec-bg p-5 -ml-[00%]'>
                         <div>
                             <ul>
                                 {
-                                    menus.map(menu => <li key={menu.id} className='my-4 text-sec-text'><Link to={`/${menu.name}`}>{menu.name}</Link></li>)
+                                    menus.map(menu => <li onClick={() => handleClickScroll(menu.name)} key={menu.id} className='my-4 text-sec-text'><Link to={`#/${menu.name}`}>{menu.name}</Link></li>)
                                 }
                             </ul>
                         </div>
@@ -35,12 +49,7 @@ const Navbar = () => {
                     :
                     ''
             }
-            {
-                navbarStatus
-                    ? <FontAwesomeIcon onClick={() => { setnavbarStatus(!navbarStatus) }} className='navanimation-right z-20 md:hidden  fixed text-red-400 top-[48vh] text-3xl right-0' icon="fa-arrow-left" />
-                    :
-                    <FontAwesomeIcon onClick={() => { setnavbarStatus(!navbarStatus) }} className='navanimation z-20 fixed md:hidden  text-red-400 top-[48vh] text-3xl left-0' icon="fa-arrow-right" />
-            }
+          
 
 
 

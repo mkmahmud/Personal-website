@@ -13,7 +13,7 @@ module.exports = {
         'sec-bg': '#0f1120',
         'second':'#7B4AE2',
         'sec-text': '#87888f',
-        'card-background': '#14142'
+        'card-background': '#14142a'
       },
       animation: {
         navanimation: 'navIcon 1s infinite'
