@@ -19,19 +19,23 @@ const Navbar = () => {
             setData(!data)
         }
     };
-
+ 
+    // Active Nav 
+    const [isActive, setIsActiv] = useState('Home');
     
-
 
     const menus = [{ id: 1, name: 'Home' }, { id: 2, name: 'About' }, { id: 3, name: 'Projects' }, { id: 4, name: 'Skills' }, { id: 6, name: 'Experience' }, { id: 5, name: 'Contact' }]
 
     return (
         <div className=''>
-            <div className='hidden md:block bg-sec-bg rounded-lg my-4 md:flex justify-between items-center md:z-50 md:fixed -top-2 left-0 right-0 w-full'>
+            <div className='hidden md:block bg-sec-bg rounded-lg my-4 md:flex justify-between items-center md:z-50 md:fixed -top-2 left-0 right-0 w-full max-w-[1536px] mx-auto '>
                 <Link to='/'>  <img src={logo} className='px-4 py-2 h-[70px] w-[93px]' alt="" /></Link>
                 <ul className='md:flex '>
                     {
-                        menus.map(menu => <li onClick={() => handleClickScroll(menu.name)} key={menu.id} className='mx-4 text-sec-text'><Link to={`/#${menu.name}`}>{menu.name}</Link></li>)
+                        menus.map(menu => <li onClick={() => {
+                            handleClickScroll(menu.name);
+                            setIsActiv(menu.name)
+                        }} key={menu.id} className={`mx-4  ${isActive === menu.name ? 'text-second' : 'text-sec-text'}`}><Link to={`/#${menu.name}`}>{menu.name}</Link></li>)
                     }
                 </ul>
             </div>

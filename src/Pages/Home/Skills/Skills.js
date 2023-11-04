@@ -55,8 +55,8 @@ const Skills = () => {
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
                         spaceBetween={10}
                         slidesPerView={8}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => {}}
+                        onSwiper={(swiper) => {}}
                         pagination={{ clickable: true }}
                     >
 
@@ -82,8 +82,8 @@ const Skills = () => {
                         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                         spaceBetween={10}
                         slidesPerView={8}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => {}}
+                        onSwiper={(swiper) => {}}
                         autoplay={{
                             delay: 1000,
                             disableOnInteraction: false,
@@ -122,8 +122,8 @@ const Skills = () => {
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
                         spaceBetween={6}
                         slidesPerView={4}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => {}}
+                        onSwiper={(swiper) => {}}
                     >
 
                         <SwiperSlide>  <SingelSkills content={<img src={angular} alt="" className='h-full w-full' />}></SingelSkills></SwiperSlide>
@@ -142,8 +142,8 @@ const Skills = () => {
                         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                         spaceBetween={10}
                         slidesPerView={4}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => {}}
+                        onSwiper={(swiper) => {}}
                         autoplay={{
                             delay: 500,
                             disableOnInteraction: false,
